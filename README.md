@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=https://app.shiprocket.in/sr_login/assets/images/srlogo.svg alt="Shiprocket Logo" width="300"/>
+  <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTNrbVn81Bg_2C_9aEdUkXcAhwyRiE_y5aOg&s alt="Shiprocket Logo" width="300"/>
 </p>
 
 <p align="center">
@@ -156,4 +156,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🔗 Useful Links
 
 - [Shiprocket API Documentation](https://apidocs.shiprocket.in/)
-- [Report an Issue](https://github.com/Satyam-2001/shiprocket-SDK/issues)
+- [Report an Issue](https://github.com/Satyam-2001/shiprocket/issues)
