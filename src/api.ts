@@ -5,7 +5,6 @@ import axios, {
   AxiosRequestConfig,
 } from "axios";
 
-
 export interface ShiprocketApiConfig {
   token: string;
   logger?: boolean;
@@ -51,7 +50,7 @@ export class ShiprocketApi {
           console.error("Request error:", error);
         }
         return Promise.reject(error);
-      }
+      },
     );
 
     // Response interceptor
@@ -68,19 +67,17 @@ export class ShiprocketApi {
           console.error("API Error:", errorData);
         }
         return Promise.reject(errorData);
-      }
+      },
     );
   }
 
-  public async request<T = any>(
-    config: AxiosRequestConfig
-  ): Promise<T> {
+  public async request<T = any>(config: AxiosRequestConfig): Promise<T> {
     return this.axiosInstance.request(config);
   }
 
   public async get<T = any>(
     endpoint: string,
-    params?: Record<string, any>
+    params?: Record<string, any>,
   ): Promise<T> {
     return this.request({
       method: "GET",
@@ -89,10 +86,7 @@ export class ShiprocketApi {
     });
   }
 
-  public async post<T = any>(
-    endpoint: string,
-    data?: any
-  ): Promise<T> {
+  public async post<T = any>(endpoint: string, data?: any): Promise<T> {
     return this.request({
       method: "POST",
       url: endpoint,
@@ -100,10 +94,7 @@ export class ShiprocketApi {
     });
   }
 
-  public async put<T = any>(
-    endpoint: string,
-    data?: any
-  ): Promise<T> {
+  public async put<T = any>(endpoint: string, data?: any): Promise<T> {
     return this.request({
       method: "PUT",
       url: endpoint,

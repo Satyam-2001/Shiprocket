@@ -1,7 +1,14 @@
 import { ShiprocketApi } from "../../api";
 import { EndPoint } from "../../constants/endpoints";
 import { ApiClient } from "common/api-client";
-import { GenerateAWBRequest, AWBResponse, CourierServiceabilityRequest, ServiceabilityResponse, PickupRequest, PickupResponse } from "./types";
+import {
+  GenerateAWBRequest,
+  AWBResponse,
+  CourierServiceabilityRequest,
+  ServiceabilityResponse,
+  PickupRequest,
+  PickupResponse,
+} from "./types";
 
 export class Couriers extends ApiClient {
   constructor(baseApi: ShiprocketApi) {
@@ -16,7 +23,9 @@ export class Couriers extends ApiClient {
     return this.api.get("/");
   }
 
-  async checkServiceability(data: CourierServiceabilityRequest): Promise<ServiceabilityResponse> {
+  async checkServiceability(
+    data: CourierServiceabilityRequest,
+  ): Promise<ServiceabilityResponse> {
     return this.api.get("/serviceability", { params: data });
   }
 

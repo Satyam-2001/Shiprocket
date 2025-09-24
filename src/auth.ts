@@ -24,7 +24,8 @@ export class ShiprocketAuth {
 
   constructor(config: ShiprocketAuthConfig) {
     this.api = axios.create({
-      baseURL: config.baseAuthUrl || "https://accounts.shiprocket.in/oauth/v2/token",
+      baseURL:
+        config.baseAuthUrl || "https://accounts.shiprocket.in/oauth/v2/token",
       params: {
         client_id: config.clientId,
         client_secret: config.clientSecret,
@@ -50,14 +51,14 @@ export class ShiprocketAuth {
             ...params,
             grant_type: "authorization_code",
           },
-        }
+        },
       );
 
       return response.data;
     } catch (error) {
       if (axios.isAxiosError(error)) {
         throw new Error(
-          `Failed to get token: ${error.response?.data?.error || error.message}`
+          `Failed to get token: ${error.response?.data?.error || error.message}`,
         );
       }
       throw new Error("Unknown error occurred while getting token");

@@ -8,7 +8,10 @@ export class Products extends ApiClient {
     super(baseApi, EndPoint.PRODUCTS);
   }
 
-  async getAll(params?: { page?: number; per_page?: number }): Promise<Product[]> {
+  async getAll(params?: {
+    page?: number;
+    per_page?: number;
+  }): Promise<Product[]> {
     return this.api.get("/", { params });
   }
 

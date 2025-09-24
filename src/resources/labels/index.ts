@@ -1,7 +1,11 @@
 import { ShiprocketApi } from "../../api";
 import { EndPoint } from "../../constants/endpoints";
 import { ApiClient } from "common/api-client";
-import { GenerateManifestRequest, GenerateLabelRequest, GenerateInvoiceRequest } from "./types";
+import {
+  GenerateManifestRequest,
+  GenerateLabelRequest,
+  GenerateInvoiceRequest,
+} from "./types";
 
 export class Labels extends ApiClient {
   constructor(baseApi: ShiprocketApi) {

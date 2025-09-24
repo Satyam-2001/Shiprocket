@@ -12,7 +12,9 @@ export class Tracking extends ApiClient {
     return this.api.get(`/awb/${awb}`);
   }
 
-  async trackMultipleAWBs(data: MultipleAWBTrackingRequest): Promise<TrackingResponse[]> {
+  async trackMultipleAWBs(
+    data: MultipleAWBTrackingRequest,
+  ): Promise<TrackingResponse[]> {
     return this.api.post("/awb", data);
   }
 

@@ -8,7 +8,10 @@ export class Shipments extends ApiClient {
     super(baseApi, EndPoint.SHIPMENTS);
   }
 
-  async getAll(params?: { page?: number; per_page?: number }): Promise<ShipmentDetails[]> {
+  async getAll(params?: {
+    page?: number;
+    per_page?: number;
+  }): Promise<ShipmentDetails[]> {
     return this.api.get("/", { params });
   }
 

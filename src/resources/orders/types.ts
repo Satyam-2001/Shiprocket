@@ -4,7 +4,7 @@ export interface OrderItem {
   units: number;
   selling_price: number;
   discount: string | number; // Can be empty string or number
-  tax: string | number;     // Can be empty string or number
+  tax: string | number; // Can be empty string or number
   hsn: number;
 }
 
@@ -13,7 +13,7 @@ export interface Order {
   order_date: string; // Could also use Date type if you'll parse it
   pickup_location: string;
   comment: string;
-  
+
   // Billing Information
   billing_customer_name: string;
   billing_last_name: string;
@@ -25,7 +25,7 @@ export interface Order {
   billing_country: string;
   billing_email: string;
   billing_phone: number;
-  
+
   // Shipping Information (empty if shipping_is_billing is true)
   shipping_is_billing: boolean;
   shipping_customer_name: string;
@@ -38,10 +38,10 @@ export interface Order {
   shipping_state: string;
   shipping_email: string;
   shipping_phone: string;
-  
+
   // Order Items
   order_items: OrderItem[];
-  
+
   // Payment and Charges
   payment_method: "Prepaid" | "COD";
   shipping_charges: number;
@@ -49,7 +49,7 @@ export interface Order {
   transaction_charges: number;
   total_discount: number;
   sub_total: number;
-  
+
   // Package Dimensions
   length: number;
   breadth: number;

@@ -1,7 +1,14 @@
 import { ShiprocketApi } from "../../api";
 import { EndPoint } from "../../constants/endpoints";
 import { ApiClient } from "common/api-client";
-import { CreateReturnRequest, CreateExchangeRequest, UpdateReturnRequest, ReturnOrder, ReturnServiceabilityRequest, ReturnAWBRequest } from "./types";
+import {
+  CreateReturnRequest,
+  CreateExchangeRequest,
+  UpdateReturnRequest,
+  ReturnOrder,
+  ReturnServiceabilityRequest,
+  ReturnAWBRequest,
+} from "./types";
 
 export class Returns extends ApiClient {
   constructor(baseApi: ShiprocketApi) {
@@ -20,7 +27,10 @@ export class Returns extends ApiClient {
     return this.api.post("/update", data);
   }
 
-  async getAll(params?: { page?: number; per_page?: number }): Promise<ReturnOrder[]> {
+  async getAll(params?: {
+    page?: number;
+    per_page?: number;
+  }): Promise<ReturnOrder[]> {
     return this.api.get("/", { params });
   }
 
